@@ -453,18 +453,18 @@ function productCard(product) {
 
   const getSvgIcon = (key) => {
     const icons = {
-      "bandwidth": '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2v20M2 12h20M8 8l4 4 4-4M8 16l4-4 4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-      "disk": '<svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 7v10M12 7h-3a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>',
-      "ftp_accounts": '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M3 6h18v12H3V6zm2 2v8h14V8H5z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 12h2M7 15h2M12 12h4M12 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-      "databases": '<svg viewBox="0 0 24 24" width="16" height="16"><ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>',
-      "email_accounts": '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 4l10 7 10-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg>',
-      "subdomains": '<svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5" fill="currentColor"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5 5l1.41 1.41M17.59 17.59l1.41 1.41M19 5l-1.41 1.41M6.41 17.59l1.41 1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-      "addon_domains": '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M4 6h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6 10h4M6 14h4M14 10h4M14 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M2 9h20M2 15h20" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg>',
-      "cron_jobs": '<svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 6v6l4 2.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-      "inodes": '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M3 3h18v18H3V3z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M3 9h18M9 3v18M9 9h6v6H9zM15 9v6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>',
-      "websites": '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 9h20M8 3v18M16 3v18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>',
-      "ram": '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="14" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 8h2v8H7zM10 8h2v8h-2zM13 8h2v8h-2zM16 8h2v8h-2z" stroke="currentColor" stroke-width="1" fill="none"/><path d="M3 12h18" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg>',
-      "cpu_cores": '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke="currentColor" stroke-width="1" opacity="0.5"/><circle cx="9" cy="9" r="1" stroke="currentColor" stroke-width="1" fill="currentColor"/><circle cx="15" cy="9" r="1" stroke="currentColor" stroke-width="1" fill="currentColor"/><circle cx="9" cy="15" r="1" stroke="currentColor" stroke-width="1" fill="currentColor"/><circle cx="15" cy="15" r="1" stroke="currentColor" stroke-width="1" fill="currentColor"/></svg>',
+      "bandwidth": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>',
+      "disk": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"/></svg>',
+      "ftp_accounts": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>',
+      "databases": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>',
+      "email_accounts": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>',
+      "subdomains": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13"/></svg>',
+      "addon_domains": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>',
+      "cron_jobs": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>',
+      "inodes": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>',
+      "websites": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"/></svg>',
+      "ram": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/></svg>',
+      "cpu_cores": '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"/></svg>',
     };
     return icons[key] || null;
   };
@@ -808,10 +808,11 @@ function openCurrencyDropdown() {
   btn.classList.add("open");
   dropdown.classList.add("open");
   
-  // Position below button, right-aligned
+  // Match dropdown width to the trigger button
   const rect = btn.getBoundingClientRect();
+  dropdown.style.width = rect.width + "px";
   dropdown.style.top = (rect.bottom + 6) + "px";
-  dropdown.style.left = Math.max(8, rect.right - dropdown.offsetWidth) + "px";
+  dropdown.style.left = Math.max(8, Math.min(rect.left, window.innerWidth - rect.width - 8)) + "px";
 }
 
 function closeCurrencyDropdown() {
@@ -1014,10 +1015,11 @@ function openLanguageDropdown() {
   btn.classList.add("open");
   dropdown.classList.add("open");
   
-  // Position below button, left-aligned
+  // Match dropdown width to the trigger button
   const rect = btn.getBoundingClientRect();
+  dropdown.style.width = rect.width + "px";
   dropdown.style.top = (rect.bottom + 6) + "px";
-  dropdown.style.left = Math.max(8, rect.left) + "px";
+  dropdown.style.left = Math.max(8, Math.min(rect.left, window.innerWidth - rect.width - 8)) + "px";
 }
 
 function closeLanguageDropdown() {
