@@ -84,7 +84,7 @@ Regenerate `data.json` whenever catalog/pricing changes (or via cron), then keep
 Example cron (every 5 minutes):
 
 ```bash
-*/5 * * * * php /path/to/gen.php --out=/path/to/public/data.json
+*/5 * * * * /usr/local/bin/php /home/mehrnet/public_html/gen.php --out=/home/mehrnet/public_html/data.json
 ```
 
 If your host defaults `php` to CGI/FastCGI in cron, use an explicit CLI binary path (for example `/usr/bin/php` or `/usr/local/bin/php-cli`).
