@@ -208,15 +208,6 @@ function isTruthy(value) {
   return ["1", "true", "yes", "on", "enabled", "active"].includes(raw);
 }
 
-function isLocalAssetUrl(raw) {
-  const value = text(raw);
-  if (value.startsWith("/")) return true;
-  // Allow absolute URLs from the same site
-  const publicUrl = text(state.data?.meta?.public_site_url);
-  if (publicUrl && value.startsWith(publicUrl)) return true;
-  return false;
-}
-
 function localHrefOrFallback(raw, fallback = "#") {
   const value = text(raw);
   if (!value) return fallback;
@@ -335,7 +326,7 @@ function renderCategoryFilters() {
     btn.dataset.categoryId = category.id;
     
     // Add icon if available
-    if (isLocalAssetUrl(category.icon_url)) {
+    if (text(category.icon_url)) {
       const img = document.createElement("img");
       img.src = text(category.icon_url);
       img.alt = "";
@@ -383,7 +374,7 @@ function productCard(product) {
   const titleWrap = document.createElement("div");
   titleWrap.className = "card-title-wrap";
 
-  if (isLocalAssetUrl(product.icon_url)) {
+  if (text(product.icon_url)) {
     const img = document.createElement("img");
     img.src = text(product.icon_url);
     img.alt = "";
@@ -567,7 +558,7 @@ function renderProducts() {
     const head = document.createElement("div");
     head.className = "category-head";
 
-    if (isLocalAssetUrl(category.icon_url)) {
+    if (text(category.icon_url)) {
       const img = document.createElement("img");
       img.src = text(category.icon_url);
       img.alt = "";
@@ -928,7 +919,7 @@ function applyBranding() {
   const headerEl = document.querySelector("header");
   if (headerEl) {
     const headerBgUrl = getAssetUrl("header_bg_url");
-    if (headerBgUrl && isLocalAssetUrl(headerBgUrl)) {
+    if (headerBgUrl) {
       headerEl.style.backgroundImage = `url('${headerBgUrl}')`;
       headerEl.style.backgroundSize = "cover";
       headerEl.style.backgroundPosition = "center";
@@ -938,7 +929,7 @@ function applyBranding() {
   const footerEl = document.querySelector("footer");
   if (footerEl) {
     const footerBgUrl = getAssetUrl("footer_bg_url");
-    if (footerBgUrl && isLocalAssetUrl(footerBgUrl)) {
+    if (footerBgUrl) {
       footerEl.style.backgroundImage = `url('${footerBgUrl}')`;
       footerEl.style.backgroundSize = "cover";
       footerEl.style.backgroundPosition = "center";
