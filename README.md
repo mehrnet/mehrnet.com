@@ -30,13 +30,21 @@ BILLING_API_KEY=your_api_key
 PUBLIC_SITE_URL=https://example.com
 ```
 
-3. Generate data:
+3. Harden local file permissions (recommended):
+
+```bash
+chmod 600 .env gen.php
+```
+
+Keep `.env` and `gen.php` outside any web-served directory.
+
+4. Generate data:
 
 ```bash
 php gen.php
 ```
 
-4. Serve the static files (`index.html`, `style.css`, `script.js`, `data.json`) from your web server.
+5. Serve the static files (`index.html`, `style.css`, `script.js`, `data.json`) from your web server.
 
 ## Common Commands
 
@@ -78,3 +86,5 @@ Example cron (every 5 minutes):
 ```bash
 */5 * * * * php /path/to/gen.php --out=/path/to/public/data.json
 ```
+
+If your host defaults `php` to CGI/FastCGI in cron, use an explicit CLI binary path (for example `/usr/bin/php` or `/usr/local/bin/php-cli`).

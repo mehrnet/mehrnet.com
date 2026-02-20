@@ -1413,7 +1413,15 @@ function getThemeAssetUrl(string $envVarName, string $themeBaseUrl, string $defa
 
 function run(): int
 {
-    if (PHP_SAPI !== 'cli') {
+    $isCliSapi = (PHP_SAPI === 'cli' || PHP_SAPI === 'phpdbg');
+    $isShellInvokedCgi = (
+        PHP_SAPI === 'cgi-fcgi'
+        && !isset($_SERVER['REQUEST_METHOD'])
+        && !isset($_SERVER['REMOTE_ADDR'])
+        && !empty($_SERVER['argv'])
+    );
+
+    if (!$isCliSapi && !$isShellInvokedCgi) {
         http_response_code(403);
         echo "This script is intended to run from CLI.\n";
         return 1;
