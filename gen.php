@@ -1016,7 +1016,7 @@ function sanitizeProductForPublic(array $product, array $enabledCurrencySet): ar
          }
      }
      
-     // Reorder features: bandwidth first, then disk, then others
+     // Reorder features for consistent frontend display
      $reordered = [];
      $featuresByKey = [];
      foreach ($features as $feature) {
@@ -1024,7 +1024,7 @@ function sanitizeProductForPublic(array $product, array $enabledCurrencySet): ar
      }
      
      // Desired order
-     $desiredOrder = ['disk', 'bandwidth', 'addon_domains', 'databases', 'email_accounts', 'ftp_accounts', 'subdomains', 'cron_jobs', 'inodes', 'websites', 'ram', 'cpu_cores'];
+     $desiredOrder = ['disk', 'bandwidth', 'databases', 'email_accounts', 'ftp_accounts', 'subdomains', 'addon_domains', 'websites', 'cron_jobs', 'inodes', 'cpu_cores', 'ram'];
      foreach ($desiredOrder as $key) {
          if (isset($featuresByKey[$key])) {
              foreach ($featuresByKey[$key] as $feature) {
