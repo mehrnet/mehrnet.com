@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loading...</title>
+  <meta name="description" content="">
+  <link rel="icon" href="data:,">
+  <style>
+    html, body { background: #000; }
+  </style>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <noscript>
+    <div class="panel noscript-card">
+      <h2 data-i18n="errors.jsRequired">JavaScript Required</h2>
+      <p data-i18n="noscript">This website requires JS to function. Please enable JavaScript and reload this page.</p>
+    </div>
+  </noscript>
+
+  <header class="hero panel">
+    <div class="header-left">
+      <img src="" alt="" class="brand-logo light-logo" id="brandLogoLight">
+      <img src="" alt="" class="brand-logo dark-logo" id="brandLogoDark">
+    </div>
+    
+    <div class="header-center">
+      <p class="brand-mark" id="brandMark"></p>
+    </div>
+    
+    <div class="header-right">
+      <button class="language-btn" id="languageBtn" style="display: flex;">
+        <span id="languageFlag" class="language-flag-icon" style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; border-radius: 4px; overflow: hidden;"></span>
+        <span id="languageDisplay">English</span>
+        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <button class="currency-btn" id="currencyBtn" style="display: none;">
+        <span id="currencyIcon"></span>
+        <span id="currencyDisplay">USD</span>
+        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <a href="#" id="clientAreaBtn" class="btn primary" style="display: none;" target="_blank">
+        <svg viewBox="0 0 24 24" width="18" height="18" style="fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;">
+          <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+        </svg>
+        <span id="clientAreaLabel">Client Area</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="category-filters" id="categoryFilters"></div>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="nav.plans">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="stroke-width: 1.5; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; display: inline-block; margin-right: .5rem; vertical-align: middle;">
+          <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+          <path d="M3 9h18"></path>
+          <path d="M9 3v18"></path>
+        </svg>
+        Plans
+      </h2>
+      <div id="categoriesContainer"></div>
+    </section>
+
+    <section class="panel" id="domainsSection" style="display: none;">
+      <h2 data-i18n="nav.domains">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="stroke-width: 1.5; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; display: inline-block; margin-right: .5rem; vertical-align: middle;">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18"></path>
+          <path d="M12 3a9 9 0 0 1 0 18"></path>
+          <path d="M12 3a9 9 0 0 0 0 18"></path>
+        </svg>
+        Domains
+      </h2>
+      <div id="domainsContainer"></div>
+    </section>
+
+    <section class="panel" id="ratesSection" style="display: none;">
+      <h2 data-i18n="nav.rates">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="stroke-width: 1.5; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; display: inline-block; margin-right: .5rem; vertical-align: middle;">
+          <circle cx="12" cy="12" r="9"></circle>
+          <text x="12" y="16" text-anchor="middle" font-size="8" fill="currentColor" font-weight="bold">$</text>
+        </svg>
+        Currency Exchange Rates
+      </h2>
+      <div id="ratesContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footerContainer"></div>
+    <a href="https://github.com/mehrnet/mehrnet.com" target="_blank" class="footer-github">
+      <svg viewBox="0 0 24 24" width="16" height="16" style="fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;">
+        <path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+      </svg>
+      GitHub
+    </a>
+  </footer>
+
+  <template id="emptyTemplate">
+    <div class="empty"></div>
+  </template>
+
+  <div class="currency-dropdown" id="currencyDropdown"></div>
+  <div class="language-dropdown" id="languageDropdown"></div>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
